@@ -32,7 +32,7 @@ def load_bvh_file(bvh_file, format="lafan1"):
             # Add modified foot pose
             result["LeftFootMod"] = [result["LeftFoot"][0], result["LeftToe"][1]]
             result["RightFootMod"] = [result["RightFoot"][0], result["RightToe"][1]]
-        elif format == "nokov":
+        elif format in ["nokov", "qingtong"]:
             result["LeftFootMod"] = [result["LeftFoot"][0], result["LeftToeBase"][1]]
             result["RightFootMod"] = [result["RightFoot"][0], result["RightToeBase"][1]]
         else:
@@ -45,5 +45,4 @@ def load_bvh_file(bvh_file, format="lafan1"):
     human_height = 1.75  # cm to m
 
     return frames, human_height
-
 

@@ -24,12 +24,23 @@ conda install -c conda-forge libstdcxx-ng -y
 ## 快速开始
 
 ```bash
+# LAFAN1 format
 python scripts/bvh_to_robot.py \
   --bvh_file example_data/lafan1/run1_subject2.bvh \
   --robot agibot_a3 \
   --save_path outputs/lafan1-run1_subject2-gmr.pkl \
   --rate_limit \
   --format lafan1
+
+# qingtong format
+python scripts/bvh_to_robot.py \
+  --bvh_file example_data/qingtong/3youzhiquan2.bvh \
+  --robot agibot_a3 \
+  --save_path outputs/qingtong-3youzhiquan2-gmr.pkl \
+  --rate_limit \
+  --format qingtong \
+  --record_video --video_path outputs/qingtong-3youzhiquan2-gmr.mp4
+
 ```
 
 运行成功后会生成：
