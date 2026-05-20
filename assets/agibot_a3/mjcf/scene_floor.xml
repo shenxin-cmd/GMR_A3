@@ -1,0 +1,27 @@
+<mujoco model="scene">
+  <include file="a3_t2d0.xml"/>
+
+  <statistic center="1.0 0.7 1.5" extent="0.8"/>
+
+  <visual>
+    <map force="0.1" fogend="20" fogstart="10" shadowclip="5" />
+    <headlight diffuse="0.3 0.3 0.3" ambient="0.3 0.3 0.3" specular="0.9 0.9 0.9"/>
+    <global offwidth="1280" offheight="960"
+            azimuth="-140" elevation="-20"/>
+    <quality shadowsize="16384"/>
+  </visual>
+
+  <asset>
+    <!-- <texture type="skybox" builtin="gradient" rgb1="0.7490 0.8392 0.8353" rgb2="0.7490 0.8392 0.8353" width="100" height="100"/> -->
+    <texture type="skybox" builtin="gradient" rgb1="0.9176 0.9216 0.9294" rgb2="0.9176 0.9216 0.9294" width="100" height="100"/>
+    <texture builtin="checker" height="100" width="100" name="texplane" rgb1="0.7490 0.8392 0.8353" rgb2="0.7490 0.8392 0.8353" type="2d" mark="edge" markrgb="1 1 1"/>
+    <material name="MatPlane" reflectance="0.0" shininess="2" specular="1" texrepeat="120 120" texture="texplane"/>
+    <material name="MatCyclorama" rgba="0.36 0.36 0.38 1" reflectance="0" specular="0.05" shininess="0.1"/>
+  </asset>
+
+  <worldbody>
+    <light pos="3.5 3 3.5" dir="-1 -1 -1" directional="true"/>
+    <geom name="floor" size="30 30 0.125" type="plane" conaffinity="7" material="MatPlane"/>
+  </worldbody>
+
+</mujoco>
