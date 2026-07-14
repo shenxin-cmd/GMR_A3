@@ -24,6 +24,7 @@ ROBOT_XML_DICT = {
     "pal_talos": ASSET_ROOT / "pal_talos" / "talos.xml",
     "fourier_gr3": ASSET_ROOT / "fourier_gr3v2_1_1" / "mjcf" / "gr3v2_1_1_dummy_hand.xml",
     "agibot_a3": ASSET_ROOT / "agibot_a3" / "mjcf" / "scene_floor.xml",
+    "agibot_a3_racket": ASSET_ROOT / "agibot_a3" / "mjcf" / "scene_floor_racket.xml",
 }
 
 IK_CONFIG_DICT = {
@@ -46,6 +47,8 @@ IK_CONFIG_DICT = {
         "pnd_adam_lite": IK_CONFIG_ROOT / "smplx_to_adam.json",
         "tienkung": IK_CONFIG_ROOT / "smplx_to_tienkung.json",
         "fourier_gr3": IK_CONFIG_ROOT / "smplx_to_gr3.json",
+        "agibot_a3": IK_CONFIG_ROOT / "smplx_to_agibot_a3.json",
+        "agibot_a3_racket": IK_CONFIG_ROOT / "smplx_to_agibot_a3.json",
     },
     "bvh_lafan1":{
         "unitree_g1": IK_CONFIG_ROOT / "bvh_lafan1_to_g1.json",
@@ -104,6 +107,7 @@ ROBOT_BASE_DICT = {
     "pal_talos": "base_link",
     "fourier_gr3": "base_link",
     "agibot_a3": "pelvis_link",
+    "agibot_a3_racket": "pelvis_link",
 }
 
 VIEWER_CAM_DISTANCE_DICT = {
@@ -126,4 +130,5 @@ VIEWER_CAM_DISTANCE_DICT = {
     "pal_talos": 3.0,
     "fourier_gr3": 2.0,
     "agibot_a3": 2.0,
+    "agibot_a3_racket": 2.0,
 }
